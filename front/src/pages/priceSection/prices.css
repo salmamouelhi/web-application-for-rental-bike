@@ -1,0 +1,464 @@
+.cards {
+	
+	font-size: 16px;
+	color: #ffffff;
+	text-rendering: optimizeLegibility;
+	font-weight: initial;
+    background-color: #E7DFDE ;
+  
+}
+
+.dark {
+	background: #110f16;
+}
+
+.light {
+    display: contents;
+	background-color: #E7DFDE;
+
+}
+
+a,
+a:hover {
+  
+	text-decoration: none;
+	transition: color 0.3s ease-in-out;
+}
+
+#pageHeaderTitle {
+	margin: 2rem 0;
+	text-transform: uppercase;
+	text-align: center;
+	font-size: 2.5rem;
+}
+
+/* Cards */
+
+
+
+
+
+
+
+.postcard {
+	flex-wrap: wrap;
+	display: flex;
+	box-shadow: 0 4px 21px -12px rgba(0, 0, 0, 0.66);
+	border-radius: 10px;
+	margin: 0 0 2rem 0;
+	overflow: hidden;
+	position: relative;
+	color: black;
+    background-color: whitesmoke;
+ 	height: 380px;
+}
+
+
+
+
+
+  .h1Price{
+		margin-bottom: 0.5rem;
+		font-weight: 500;
+		
+	}
+
+	.small {
+		font-size: 80%;
+	}
+
+	.postcard__title {
+		font-size: 1.75rem;
+	}
+
+	.postcard__img {
+		max-height: 180px;
+		width: 100%;
+		object-fit: cover;
+		position: relative;
+	}
+
+	.postcard__img_link {
+		display: contents;
+	}
+  
+
+	.postcard__bar {
+		width: 50px;
+		height: 10px;
+		margin: 10px 0;
+		border-radius: 5px;
+		background-color: #424242;
+		transition: width 0.2s ease;
+	}
+
+	.postcard__text {
+		padding: 1.5rem;
+		position: relative;
+		display: flex;
+		flex-direction: column;
+	}
+
+	.postcard__preview-txt {
+		overflow: hidden;
+		text-overflow: ellipsis;
+		text-align: justify;
+		height: 100%;
+	}
+
+	.postcard__tagbox {
+		display: flex;
+		flex-flow: row wrap;
+		font-size: 14px;
+		margin: 20px 0 0 0;
+		padding: 0;
+		justify-content: center;
+
+	
+		
+	}
+
+	
+
+
+@media screen and (min-width: 769px) {
+	.postcard {
+		flex-wrap: inherit;
+
+	}
+
+		.postcard__tagbox {
+			justify-content: start;
+		}
+
+		.postcard__img {
+			max-width: 300px;
+			max-height: 100%;
+			transition: transform 0.3s ease;
+		}
+
+		.postcard__text {
+			padding: 3rem;
+			width: 100%;
+		}
+
+		.media.postcard__text:before {
+			content: "";
+			position: absolute;
+			display: block;
+			background: #18151f;
+			top: -20%;
+			height: 130%;
+			width: 55px;
+		}
+
+
+
+	
+}
+@media screen and (min-width: 1024px) {
+	.postcard__text {
+		padding: 2rem 3.5rem;
+	}
+
+	.postcard__text:before {
+		content: "";
+		position: absolute;
+		display: block;
+
+		top: -20%;
+		height: 130%;
+		width: 55px;
+	}
+
+	
+}
+
+/* COLORS */
+.postcard .postcard__tagbox .green.play:hover {
+	background: green;
+	color: black;
+}
+.green .postcard__title:hover {
+	color:green;
+}
+.green .postcard__bar {
+	background-color: green;
+}
+.green::before {
+	background-image: linear-gradient(
+		-30deg,
+
+		transparent 50%
+	);
+}
+.green:nth-child(2n)::before {
+	background-image: linear-gradient(30deg, green, transparent 50%);
+}
+
+.postcard .postcard__tagbox .blue.play:hover {
+	background: bleu;
+}
+.blue .postcard__title:hover {
+	color: blue;
+}
+.blue .postcard__bar {
+	background-color: blue;
+}
+.blue::before {
+	background-image: linear-gradient(-30deg, bleu, transparent 50%);
+}
+.blue:nth-child(2n)::before {
+	background-image: linear-gradient(30deg, blue, transparent 50%);
+}
+
+.postcard .postcard__tagbox .red.play:hover {
+	background: red;
+}
+.red .postcard__title:hover {
+	color: red;
+}
+.red .postcard__bar {
+	background-color: red;
+}
+.red::before {
+	background-image: linear-gradient(-30deg, red, transparent 50%);
+}
+.red:nth-child(2n)::before {
+	background-image: linear-gradient(30deg, red, transparent 50%);
+}
+
+.postcard .postcard__tagbox .yellow.play:hover {
+	background:yellow;
+	color: black;
+}
+.yellow .postcard__title:hover {
+	color: yellow;
+}
+.yellow .postcard__bar {
+	background-color:yellow;
+}
+.yellow::before {
+	background-image: linear-gradient(
+		-30deg,
+		
+		transparent 50%
+	);
+}
+.yellow:nth-child(2n)::before {
+	background-image: linear-gradient(
+		30deg,
+		
+		transparent 50%
+	);
+}
+
+@media screen and (min-width: 769px) {
+	.green::before {
+		background-image: linear-gradient(
+			-80deg,
+		
+			transparent 50%
+		);
+	}
+	.green:nth-child(2n)::before {
+		background-image: linear-gradient(
+			80deg,
+		
+			transparent 50%
+		);
+	}
+
+	.blue::before {
+		background-image: linear-gradient(
+			-80deg,
+			
+			transparent 50%
+		);
+	}
+	.blue:nth-child(2n)::before {
+		background-image: linear-gradient(80deg, blue, transparent 50%);
+	}
+
+	.red::before {
+		background-image: linear-gradient(-80deg, blue, transparent 50%);
+	}
+	.red:nth-child(2n)::before {
+		background-image: linear-gradient(80deg,blue, transparent 50%);
+	}
+
+	.yellow::before {
+		background-image: linear-gradient(
+			-80deg,
+			
+			transparent 50%
+		);
+	}
+	.yellow:nth-child(2n)::before {
+		background-image: linear-gradient(
+			80deg,
+		
+			transparent 50%
+		);
+	}
+  .priceListTitle{
+    color: #E73725;
+  }
+
+
+  .custom-btn-reserver{
+    width: 130px;
+  height: 40px;
+  color: rgb(0, 0, 0);
+  border-radius: 5px;
+  padding: 10px 25px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 500;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+   box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+   7px 7px 20px 0px rgba(0,0,0,.1),
+   4px 4px 5px 0px rgba(0,0,0,.1);
+  outline: none;
+  
+  }
+
+
+  .btn-5-reserver{
+	width: 130px;
+  height: 40px;
+  line-height: 42px;
+  padding: 0;
+  border: none;
+  background: rgb(255,27,0);
+  background: linear-gradient(0deg, rgba(255,27,0,1) 0%, rgba(251,75,2,1) 100%);
+  position: relative;
+  color: #ddd;
+  }
+
+
+  .btn-5-reserver:hover {
+    color: #000000;
+    background: rgb(241, 180, 180);
+    box-shadow:none;
+  }
+  .btn-5-reserver:before,
+  .btn-5-reserver:after{
+    content:'';
+    position:absolute;
+    top:0;
+    right:0;
+    height:2px;
+    width:0;
+    background: #f0094a;
+    box-shadow:
+     -1px -1px 5px 0px #fff,
+     7px 7px 20px 0px #0003,
+     4px 4px 5px 0px #0002;
+    transition:400ms ease all;
+  }
+  .btn-5-reserver:after{
+    right:inherit;
+    top:inherit;
+    left:0;
+    bottom:0;
+  }
+  .btn-5-reserver:hover:before,
+  .btn-5-reserver:hover:after{
+    width:100%;
+    transition:800ms ease all;
+  }
+  
+  .frame {
+    width: 90%;
+    margin: 40px auto;
+    text-align: center;
+    margin-left: 320px;
+    margin-top: 10px;
+  }
+
+/* search bar */
+
+.filterSection{
+padding-bottom: 50px;
+
+justify-content: center;
+}
+
+.searchBox{
+  float: left;
+}
+
+
+.inputSearch{
+  border-radius: 20px;
+  border-color: #E73725;
+  border: none;
+  width: 300px;
+  height: 40px;
+}
+
+.btnSearch{
+  border-radius: 20px;
+  background-color: #E73725;
+  border-color: #E73725 ;
+  color: white;
+  border: none;
+  height: 40px;
+  width: 40px;
+}
+/*dropdown */
+/* Dropdown Button */
+.dropbtnPrice {
+  background-color: #E73725;
+  color: white;
+  margin-right: 420px;
+  font-size: 19px;
+  border: none;
+  border-radius: 20px;
+  width: 300px;
+  height: 40px;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdownPrice {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-contentPrice {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-contentPrice a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-contentPrice a:hover {background-color: #ddd;}
+
+/* Show the dropdown menu on hover */
+.dropdownPrice:hover .dropdown-contentPrice {display: block;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdownPrice:hover .dropbtnPrice {background-color: rgb(219, 171, 171);}
+}
+
+
+.description{
+	font-size: large;
+	text-align: center;
+}
